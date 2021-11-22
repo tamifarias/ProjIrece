@@ -8,11 +8,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/3149c18db9.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link href="css/styles.css" rel="stylesheet">
-    <title>Ristorante Con Fusion</title>
+    <title>UR08 - Irecê</title>
 </head>
 
 <body>
@@ -22,149 +23,473 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="41" alt=""></a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> Quem Somos?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contato</a></li>
                 </ul>
-
-            </div>          
+            </div> 
+            <button type="button" class="btn btn-primary">
+                Cadastre seu caso de sucesso!
+            </button>
         </div>
     </nav>
 
-    <header class="jumbotron">
-        <div class="container">
-            <div class="row row-header">
-                <div class="col-12 col-sm-6">
-                    <h1>Ristorante con Fusion</h1>
-                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
-                </div>
-                <div class="col-12 mb-5 mb-sm-0 col-sm-3 text-center align-self-center">
-                    <img src="img/logo.png" class="img-fluid" alt="">
-                </div>
-                <div class="col-12 col-sm-3 align-self-center">
-                    <a type="button" class="btn btn-warning btn-block" id="reserveButton">Reserve table</a>
-                </div>
+    <!-- Modal -->
+    <div class="modal fade" id="ModalAgro" tabindex="-1" aria-labelledby="ModalLabelAgro" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="ModalLabelAgro">Projeto Agronordeste Irecê</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-        </div>
-    </header>
+            <div class="modal-body">
+            
+              <div class="row">
+                <div class="col-sm d-flex justify-content-center">
+                  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <div class="btn-group" role="group">
+                      <button id="btnGroupDrop1" type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Relatório Anual
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item" href="#">Relatório 2021</a></li>
+                      </ul>
+                    </div>
+            
+                    <div class="btn-group" role="group">
+                      <button id="btnGroupDrop1" type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Planejamento Anual
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item" href="#">Planejamento 2022</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="row row-content">
+            
+                <div class="col-8">
+                  <ul class="nav nav-tabs" id="myTabModel" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link active" id="model3-tab" data-bs-toggle="tab" href="#tab3" role="tab" aria-controls="tab3"
+                        aria-selected="true">Objetivo Geral</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="model4-tab" data-bs-toggle="tab" href="#tab4" role="tab" aria-controls="tab4"
+                        aria-selected="false">Público-Alvo</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="model5-tab" data-bs-toggle="tab" href="#tab5" role="tab" aria-controls="tab5"
+                        aria-selected="false">Foco Estratégico</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="model6-tab" data-bs-toggle="tab" href="#tab6" role="tab" aria-controls="tab6"
+                        aria-selected="false">Premissas</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContentModel">
+                    <div class="tab-pane fade show active" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                      <h5>Objetivo Geral</h5>
+                      <br>
+                      <div class="d-flex">
+                        <div>
+                          <p class="d-none d-sm-block"> Promover o desenvolvimento setorial e sustentável nos segmentos econômicos
+                            priorizados e territórios inseridos
+                            em cadeia produtiva e pertencentes às áreas de abrangência do semiárido e biomas do nordeste.</p>
+                        </div>
+                        <img src="img/Agromodal.jfif" alt="AgroModal" class="me-3 img-thumbnail align-self-center" />
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+                      <h5>Público-Alvo</h5>
+                      <br>
+                      <p>715 empreendimentos rurais, sendo 712 produtores rurais, classificados como microempresas (DAP, NIRF ou
+                        CNPJ) e
+                        3 Agroindústrias pertencentes às cadeias da Bovinocultura leiteira, apicultura, caprinovinocultura,
+                        fruticultura e horticultura.</p>
+                    </div>
+                    <div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="tab5-tab">
+                      <h5>Foco Estratégico</h5>
+                      <br>
+                      <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Promover o acesso à tecnologia e boas práticas de produção;</a>
+                        <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Promover Assistência Técnica e Gerencial;</a>
+                        <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Aprimorar a gestão dos empreendimentos rurais e agroindustriais;</a>
+                        <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Promover o acesso a mercados através de certificações e produtos diferenciados;</a>
+                        <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Orientar o acesso a políticas públicas e crédito;</a>
+                        <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Fomentar o acesso a tecnologias digitais de negócios.</a>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab6" role="tabpanel" aria-labelledby="tab6-tab">
+                      <h5>Premissas</h5>
+                      <br>
+                      <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action list-group-item-primary"> Atuar territorialmente em segmentos econômicos com concentração de pequenos negócios rurais e urbanos, preferencialmente inseridos em uma das cadeias produtivas priorizadas.;</a>
+                        <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Difundir o conhecimento especializado e tecnologias, de forma direta ou por meio de parcerias para o fortalecimento técnico de pequenos negócios.;</a>
+                        <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Estimular o empreendedorismo por meio de identificação de oportunidades nas cadeias trabalhadas, possibilitando a inclusão produtiva do jovem no campo e a valorização de gênero.;</a>
+                        <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Produzir e disseminar inteligência estratégica para tomada de decisão com base em: potencial de produção, produtos, mercado, agroindústrias e tendências de consumo;</a>
+                        <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Incluir e fortalecer a transformação digital;</a>
+                        <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Estimular redes de cooperação.</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="col-4">
+                  <div class="card">
+                    <h3 class="card-header bg-success text-white"></h3>
+                    <div class="card-body">
+                      <dl class="row">
+                        <dt class="col-6">Gestor do Projeto</dt>
+                        <dd class="col-6">Mauro Henrique L. M. Viana</dd>
+                        <dt class="col-6">Gestor Nacional</dt>
+                        <dd class="col-6">Newman Maria da Costa</dd>
+                        <dt class="col-6">Gestora Estadual</dt>
+                        <dd class="col-6">Adriana Maria Moura Bonifacio</dd>
+                        <dt class="col-6">Coordenador Estadual</dt>
+                        <dd class="col-6">Edirlan Miranda de Oliveira Souza</dd>
+                        <dt class="col-6">Data Início</dt>
+                        <dd class="col-6">01/02/2020</dd>
+                        <dt class="col-6">Data Término</dt>
+                        <dd class="col-6">31/12/2022</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-    <div class="container">
-        <nav aria-label="breadcrumb">
-            <ol class=" col-12 breadcrumb border bg-light p-2">
-              <li class="breadcrumb-item active" aria-current="page">Home</li>
-              <li class="breadcrumb-item"><a href="./aboutus.html">About Us</a></li>
-              <li class="breadcrumb-item"><a href="./contactus.html">Contact</a></li>
-            </ol>
-        </nav>
-        <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Our Lipsmacking Culinary Creations</h3>
-            </div>
-            <div class="col col-sm order-sm-first col-md">
-                <div class="d-flex">
-                    <img src="img/uthappizza.png" alt="Uthappizza"
-                      class="me-3 img-thumbnail align-self-center"/>
-                    <div>
-                        <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span></h2>
-                        <p class= "d-none d-sm-block"> A unique combination of Indian Uthappam (pancake) and 
-                            Italian pizza, topped with Cerignola olives, ripe vine 
-                            cherry tomatoes, Vidalia onion, Guntur chillies and 
-                            Buffalo Paneer.</p>
-                    </div>
+              <div class="row row-content">
+                <h4>Vídeos</h4>
+                <br>
+                <div class="col">
+                  <div class="embed-responsive embed-responsive-1by1">
+                    <iframe width="320" height="315" class="embed-responsive-item" src="https://www.youtube.com/embed/InDiLoFiNtY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
-            </div>  
-        </div>
-        <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 col-md-3">
-                <h3>This Month's Promotions</h3>
-            </div>
-            <div class="col col-sm col-md">
-                <div class="d-flex">
-                    <img src="img/buffet.png" alt="Alberto Somayya"
-                      class="me-3 img-thumbnail align-self-center"/>
-                    <div>
-                        <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
-                        <p class= "d-none d-sm-block">Featuring mouthwatering combinations with a choice of five 
-                            different salads, six enticing appetizers, six main entrees 
-                            and five choicest desserts. Free flowing bubbly 
-                            and soft drinks. All for just $19.99 per person </p>
-                    </div>
+                </div>
+                <div class="col">
+                  <div class="embed-responsive embed-responsive-1by1">
+                    <iframe width="320" height="315" class="embed-responsive-item" src="https://www.youtube.com/embed/kfMIgcK9Ks4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
-            </div>
-        </div>
+                </div>
+                <div class="col">
+                  <div class="embed-responsive embed-responsive-1by1">
+                    <iframe width="320" height="315" class="embed-responsive-item" src="https://www.youtube.com/embed/_3CXDTykHrE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
 
-        <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Our Lipsmacking Culinary Creations</h3>
-            </div>
-            <div class="col col-sm order-sm-first col-md">
-                <div class="d-flex">
-                    <img src="img/alberto.png" alt="Alberto Somayya"
-                      class="me-3 img-thumbnail align-self-center"/>
+              <div class="row row-content">
+                <h4>Notícias</h4>
+                <br>
+                <div class="col-6"> 
+                  <div class="d-flex position-relative">
+                    <img width=250px height=250px src="img/sebrae.png" class="flex-shrink-0 me-3" alt="noticia1">
                     <div>
-                        <h2 class="mt-0">Alberto Somayya</h2>
-                        <h4>Executive Chef</h4>
-                        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide
-                            International experience having worked closely with
-                            whos-who in the culinary world, he specializes in
-                            creating mouthwatering Indo-Italian fusion experiences.
-                        </p>
+                      <h5 class="mt-0">Associação Raízes do Sertão implementa melhorias com apoio do Sebrae</h5>
+                      <p>Entidade passou por consultorias com foco em produção, vendas e gestão interna, através do programa Agronordeste Irecê</p>
+                      <a href="http://www.ba.agenciasebrae.com.br/sites/asn/uf/BA/associacao-raizes-do-sertao-implementa-melhorias-com-apoio-do-sebrae,37afa02269bf9710VgnVCM100000d701210aRCRD" class="stretched-link" target="_blank">Link >></a>
                     </div>
                   </div>
-            </div>  
+                </div>
+              </div>
+
+            </div>
+              <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
         </div>
     </div>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row">             
-                <div class="col-4 offset-1 col-sm-2">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="./aboutus.html">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="./contactus.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-7 col-sm-5">
-                    <h5>Our Address</h5>
-                    <address>
-		              121, Clear Water Bay Road<br>
-		              Clear Water Bay, Kowloon<br>
-		              HONG KONG<br>
-		              <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
-		              <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
-		              <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
-		           </address>
-                </div>
-                <div class="col-12 col-sm-4 align-self-center">
-                    <div class="text-center">
-                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
-                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
-                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
-                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
-                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
-                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o fa-lg"></i></a>
+    <header class="jumbotron"></header>
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class=" col-12 breadcrumb border bg-light p-2">
+              <li class="breadcrumb-item active" aria-current="page">Início</li>
+              <li class="breadcrumb-item"><a href="./aboutus.html">Quem Somos?</a></li>
+              <li class="breadcrumb-item"><a href="./contactus.html">Contato</a></li>
+            </ol>
+        </nav>
+
+        <div class="row row-content">
+            <div class="col-12">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Finalidade - UR08</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Competências e Atribuições - UR08</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                        <h5>Finalidade</h5>
+                        <hr>
+                        <div class="row">
+                          <div class="col-8">
+                            <div>
+                              <p class="d-none d-sm-block">A natureza e finalidade da Unidade Reginal é garantir o atendimento individual e coletivo à demanda do público 
+                                alvo e atuação integrada com as Unidades de Conhecimento, Unidades Temáticas e Unidades de Suporte, de acordo com as estratégias e 
+                                diretrizes da organização e representar o SEBRAE na área territorial de atuação, conforme o descrito no art. 61 deste Regimento, 
+                                fazendo interface com os stakeholders regionais.</p>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <img src="img/mapa.png" alt="mapa" class="me-3 img-rounded align-self-center" />
+                          </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                        <h5>Competências e Atribuições</h5>
+                        <hr>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Fazer a escuta diagnóstica de demandas da região definindo estratégias de atuação com as Unidades Temáticas;</a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Interagir e apoiar as coordenações temáticas, conhecimento e gestão estratégica na construção de soluções finalísticas demandadas pelo público-alvo e/ou de seu interesse, obedecendo as vocações dos municípios nos segmentos de sua atuação;</a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Implementar o planejamento estratégico no território, garantindo a interface intra projetos, o alinhamento com parceiros regionais, medindo e avaliando os resultados das operações para auxiliar a tomada de decisões, em conjunto com as Unidades de Atendimento Coletivo e Individual e Unidade de Conhecimento;</a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Entregar soluções de abordagem individual e coletiva, garantindo aderência às competências centrais do SEBRAE, avaliando os resultados e medindo o desempenho dos projetos finalísticos;</a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Fazer a gestão de todas as soluções individuais e coletivas sob sua responsabilidade observando critérios técnicos, físicos e financeiros e a metodologia GEOR;</a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Avaliar os resultados qualitativos e quantitativos das soluções individuais e coletivas de sua região.</a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Coordenar a estruturação e negociação dos projetos finalísticos definidos no Plano Plurianual do SEBRAE/BA para a região.</a>
+                        </div>
                     </div>
                 </div>
-           </div>
-           <div class="row justify-content-center">             
-                <div class="col-auto">
-                    <p>© Copyright 2018 Ristorante Con Fusion</p>
-                </div>
-           </div>
+            </div>
         </div>
+
+        <div class="row row-content">
+            <h3>Equipe</h3>
+            <hr>
+            <div class="col">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="./img/grupo.jpeg" alt="alt1">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h4>Equipe</h4>
+                          <h5> - UR8 Unidade Regional Irecê - </h5>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/Edirlan.png" class="d-block w-100" alt="alt2">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h4>Edirlan Miranda de Oliveira Souza</h4>
+                          <h5>Gerente</h5>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/Rosi.png" class="d-block w-100" alt="alt2">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h4>Rosiane Aparecida Meire Cordeiro</h4>
+                          <h5>Analista Técnico</h5>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/Mauro.png" class="d-block w-100" alt="alt3">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h4>Mauro Henrique L. M. Viana</h4>
+                          <h5>Analista Técnico</h5>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/Delian.png" class="d-block w-100" alt="alt4">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h4>Delian Mendes de Souza</h4> 
+                          <h5>Analista Técnico</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+        </div>
+
+        <div class="row row-content">
+            <div class="col-12">
+                <h3>Territórios</h3>
+                <hr>
+                <div class="accordion" id="accordionFlushExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <h5>Bacia do Paramirim <span class="badge bg-primary rounded-pill">8</span></h5>
+                            
+                        </button>
+                        
+                      </h2>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">BOQUIRA</li>
+                                    <li class="list-group-item">BOTUPORÃ</li>
+                                    <li class="list-group-item">CATURAMA</li>
+                                    <li class="list-group-item">ÉRICO CARDOSO</li>
+                                    <li class="list-group-item">MACAÚBAS</li>
+                                    <li class="list-group-item">CATURAMA</li>
+                                    <li class="list-group-item">PARAMIRIM</li>
+                                    <li class="list-group-item">RIO DOS PIRES</li>
+                                    <li class="list-group-item">IBIPITANGA</li>
+                                </ul>
+                            </div>  
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <h5>Chapada Diamantina <span class="badge bg-primary rounded-pill">22</span></h5>
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"></li>
+                                <li class="list-group-item">ABAÍRA</li>
+                                <li class="list-group-item">ANDARAÍ</li>
+                                <li class="list-group-item">BARRA DA ESTIVA</li>
+                                <li class="list-group-item">BONIVAL</li>
+                                <li class="list-group-item">BONITO</li>
+                                <li class="list-group-item">IBICOARA</li>
+                                <li class="list-group-item">IBITIARA</li>
+                                <li class="list-group-item">IRAQUARA</li>
+                                <li class="list-group-item">ITAETÉ</li>
+                                <li class="list-group-item">JUSSIAPE</li>
+                                <li class="list-group-item">LENÇÓIS</li>
+                                <li class="list-group-item">MARCIONÍLIO SOUZA</li>
+                                <li class="list-group-item">MUCUGÊ</li>
+                                <li class="list-group-item">NOVA REDENÇÃO</li>
+                                <li class="list-group-item">NOVO HORIZONTE</li>
+                                <li class="list-group-item">PALMEIRAS</li>
+                                <li class="list-group-item">PIATÃ</li>
+                                <li class="list-group-item">SEABRA</li>
+                                <li class="list-group-item">SOUTO SOARES</li>
+                                <li class="list-group-item">UTINGA</li>
+                                <li class="list-group-item">WAGNER</li>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <h5>Irecê  <span class="badge bg-primary rounded-pill">22</span></h5>
+                        </button>
+                      </h2>
+                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">                        
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"></li>
+                                <li class="list-group-item">AMÉRICA DOURADA</li>
+                                <li class="list-group-item">BARRA DO MENDES</li>
+                                <li class="list-group-item">BARRA ALTO</li>
+                                <li class="list-group-item">CAFARNAUM</li>
+                                <li class="list-group-item">CANARANA</li>
+                                <li class="list-group-item">CENTRAL</li>
+                                <li class="list-group-item">GENTIO DO OURO</li>
+                                <li class="list-group-item">IBIPEBA</li>
+                                <li class="list-group-item">IBITITÁ</li>
+                                <li class="list-group-item">IPUPIARA</li>
+                                <li class="list-group-item">IRECÊ</li>
+                                <li class="list-group-item">ITAGUAÇU DA BAHIA</li>
+                                <li class="list-group-item">JOÃO DOURADO</li>
+                                <li class="list-group-item">JUSSARA</li>
+                                <li class="list-group-item">LAPÃO</li>
+                                <li class="list-group-item">MULUNGU DO MORRO</li>
+                                <li class="list-group-item">PRESIDENTE DUTRA</li>
+                                <li class="list-group-item">SÃO GABRIEL</li>
+                                <li class="list-group-item">UIBAÍ</li>
+                                <li class="list-group-item">XIQUE-XIQUE</li>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+
+      <div class="row row-content justify-content-center">
+            <h3>Projetos</h3>
+            <hr>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="./img/cidade1.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Cidade Empreendedora</h5>
+                  <a href="#" class="btn btn-primary">Informações >></a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="./img/agro1.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Agronordeste</h5>
+                  <a href="#" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#ModalAgro">Informações >></a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="./img/renova1.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Renova Varejo</h5>
+                  <a href="#" class="btn btn-primary">Informações >></a>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+    <div class="container"> 
+      <div class="row row-content justify-content-center">
+        <h3>Vídeos</h3>
+        <hr>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="./img/video.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Vídeo 1</h5>
+            <a href="#" class="btn btn-primary">Acessar >></a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="./img/video.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Vídeo 2</h5>
+            <a href="#" class="btn btn-primary">Acessar >></a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="./img/video.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Vídeo 3</h5>
+            <a href="#" class="btn btn-primary">Acessar >></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+    
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <p>© Copyright 2021 SEBRAE-BA</p>
+        </div>
+      </div>
+    
     </footer>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-</body>
-
+            
+  </body>
+        
 </html>

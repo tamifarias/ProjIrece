@@ -9,7 +9,7 @@ body{
 }
 
 .navbar-dark {
-     background-color: #512DA8;
+     background-color: #4682B4;
 }
 
 .row-content {
@@ -26,15 +26,74 @@ body{
 }
 
 .jumbotron {
-    padding:70px 30px 70px 30px;
-    margin:0px auto;
-    background: #9575CD ;
-    color:floralwhite;
-}
+    background-image: url("../img/banner3.png");
+    background-size: cover;
+    min-height: 250px;
+    margin: 0px auto;
+    padding: 70px 30px;
+    color: floralwhite; }
+
 
 address{
     font-size:80%;
     margin:0px;
     color:#0f0f0f;
+}
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.carousel {
+    background:#4682B4;
+}
+
+.carousel-item {
+  height: 300px;
+  transition: 0.4s;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+    max-width: 300px;
+}
+
+.carousel-caption {
+    transform: translate(70px,-70px);
+    bottom: 0;
+    top: 50%; 
+}
+
+.card {
+ margin:auto;
+}
+
+.btn-primary {
+    background:#4682B4;
+}
+
+.map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+
+.map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.modal-title {
+    background-color:#8FBC8F;
 }
 
