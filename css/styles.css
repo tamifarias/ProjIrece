@@ -27,7 +27,7 @@ body{
 
 .jumbotron {
     background-image: url("../img/banner.png");
-    background-color: rgba(25, 135, 84, 0.4);
+    background-color: rgba(0, 84, 150, 1.0);
     background-position: center;
     background-repeat: no-repeat;
     min-height: 250px;
@@ -90,6 +90,32 @@ address{
 }
 
 #carouselRenova .carousel-caption{
+    transform: translateY(-50%);
+    bottom: initial;
+    top: 10%;
+    
+}
+
+#carouselAtendI .carousel-caption h5 {
+    background-color: rgba(25, 135, 84, 0.7);
+    margin: 0 auto;
+    
+}
+
+#carouselAtendI .carousel-caption{
+    transform: translateY(-50%);
+    bottom: initial;
+    top: 10%;
+    
+}
+
+#carouselCafe .carousel-caption h5 {
+    background-color: rgba(25, 135, 84, 0.7);
+    margin: 0 auto;
+    
+}
+
+#carouselCafe .carousel-caption{
     transform: translateY(-50%);
     bottom: initial;
     top: 10%;
