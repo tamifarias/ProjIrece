@@ -122,6 +122,85 @@ address{
     
 }
 
+#carouselDestinos .carousel-caption h5 {
+    background-color: rgba(25, 135, 84, 0.7);
+    margin: 0 auto;
+    
+}
+
+#carouselDestinos .carousel-caption{
+    transform: translateY(-50%);
+    bottom: initial;
+    top: 10%;
+    
+}
+
+#carouselCidade .carousel-caption h5 {
+    background-color: rgba(25, 27, 135, 0.7);
+    margin: 0 auto;
+    
+}
+
+#carouselCidade .carousel-caption{
+    transform: translateY(-50%);
+    bottom: initial;
+    top: 10%;
+    
+}
+
+#carouselNegocio .carousel-caption h5 {
+    background-color: rgba(25, 27, 135, 0.7);
+    margin: 0 auto;
+    
+}
+
+#carouselNegocio .carousel-caption{
+    transform: translateY(-50%);
+    bottom: initial;
+    top: 10%;
+    
+}
+
+#carouselSaude .carousel-caption h5 {
+    background-color: rgba(25, 27, 135, 0.7);
+    margin: 0 auto;
+    
+}
+
+#carouselSaude .carousel-caption{
+    transform: translateY(-50%);
+    bottom: initial;
+    top: 10%;
+    
+}
+
+#carouselAgroChapada .carousel-caption h5 {
+    background-color: rgba(25, 27, 135, 0.7);
+    margin: 0 auto;
+    
+}
+
+#carouselAgroChapada .carousel-caption{
+    transform: translateY(-50%);
+    bottom: initial;
+    top: 10%;
+    
+}
+
+#carouselAtendS .carousel-caption h5 {
+    background-color: rgba(25, 27, 135, 0.7);
+    margin: 0 auto;
+    
+}
+
+#carouselAtendS .carousel-caption{
+    transform: translateY(-50%);
+    bottom: initial;
+    top: 10%;
+    
+}
+
+
 .card {
  margin: 20px;
 }
