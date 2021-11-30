@@ -136,7 +136,7 @@ address{
 }
 
 #carouselCidade .carousel-caption h5 {
-    background-color: rgba(25, 27, 135, 0.7);
+    background-color: rgba(25, 135, 84, 0.7);
     margin: 0 auto;
     
 }
@@ -149,7 +149,7 @@ address{
 }
 
 #carouselNegocio .carousel-caption h5 {
-    background-color: rgba(25, 27, 135, 0.7);
+    background-color: rgba(25, 135, 84, 0.7);
     margin: 0 auto;
     
 }
@@ -162,7 +162,7 @@ address{
 }
 
 #carouselSaude .carousel-caption h5 {
-    background-color: rgba(25, 27, 135, 0.7);
+    background-color: rgba(25, 135, 84, 0.7);
     margin: 0 auto;
     
 }
@@ -175,7 +175,7 @@ address{
 }
 
 #carouselAgroChapada .carousel-caption h5 {
-    background-color: rgba(25, 27, 135, 0.7);
+    background-color: rgba(25, 135, 84, 0.7);
     margin: 0 auto;
     
 }
@@ -188,7 +188,7 @@ address{
 }
 
 #carouselAtendS .carousel-caption h5 {
-    background-color: rgba(25, 27, 135, 0.7);
+    background-color: rgba(25, 135, 84, 0.7);
     margin: 0 auto;
     
 }
@@ -203,6 +203,10 @@ address{
 
 .card {
  margin: 20px;
+}
+
+.card-title{
+    font-size: larger;
 }
 
 .btn-primary {
